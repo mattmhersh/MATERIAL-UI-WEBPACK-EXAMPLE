@@ -9,6 +9,8 @@ import {deepOrange500} from 'material-ui/styles/colors';
 import FlatButton from 'material-ui/FlatButton';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import MyAwesomeReactComponent from './MyAwesomeReactComponent';
+import { Button, Alert, Spinner, ButtonGroup, Glyph } from 'elemental';
 
 const styles = {
   container: {
@@ -71,6 +73,34 @@ class Main extends Component {
             secondary={true}
             onTouchTap={this.handleTouchTap}
           />
+          <MyAwesomeReactComponent />
+
+          <ButtonGroup>
+            <Button type="default">Left</Button>
+            <Button type="default">Middle</Button>
+            <Button type="default">Right</Button>
+          </ButtonGroup>
+
+          <br />
+          <br />
+          <Spinner size="md" />
+          <Spinner size="md" type="primary" />
+          <Spinner size="md" type="inverted" />
+
+          <br />
+          <br />
+          <Button><Spinner /></Button>
+<Button disabled><Spinner type="primary" />Saving</Button>
+<Button type="primary"><Spinner type="inverted" />Submitting</Button>
+
+          <br />
+          <br />
+          <Glyph icon="thumbsup" />
+          <Button type="primary"><Glyph icon="beaker" /></Button>
+          <Button type="danger"><Glyph icon="flame" /></Button>
+          <Button type="success"><Glyph icon="squirrel" /></Button>
+          <Button type="warning"><Glyph icon="beaker" /></Button>          
+
         </div>
       </MuiThemeProvider>
     );
